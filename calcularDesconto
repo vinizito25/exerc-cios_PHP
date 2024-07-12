@@ -1,0 +1,42 @@
+ <?php
+
+							  function calcularDesconto($valor, $categoria){
+								  
+								   switch ($categoria) {
+									   case 'eletrônicos':
+									  
+									  $calculo1=$valor * 0.1;
+									  $calcfinal=$valor - $calculo1;
+									  return $calcfinal;
+								  
+										   break;
+										   
+									case 'vestuário':
+									
+									  $calculo2=$valor * 0.2;
+									  $calcfinal2=$valor - $calculo2;
+									  return $calcfinal2;
+									   break;
+									   
+									  case 'alimentos':
+									  
+									   $calculo3=$valor * 0.05;
+									  $calcfinal3=$valor - $calculo3;
+									  return $calcfinal3;
+									   break;
+									   
+									   default:
+								
+									  $calcfinal4="Sem Desconto";
+										  return  $valor;
+										 
+								   }
+							  }
+								   
+							  
+							  
+								  echo calcularDesconto(100,"eletrônicos");
+								  echo calcularDesconto(100,"vestuário");
+								  echo calcularDesconto(100,"alimentos");
+								  echo calcularDesconto(1000,"");
+							?>
