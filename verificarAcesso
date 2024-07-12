@@ -1,0 +1,27 @@
+ <?php
+
+						 function verificarAcesso($idade, $autorizacao){
+							  
+								 
+							 if ($idade>=18 && $autorizacao==true) {
+								 $retorno1="Acesso autorizado";
+								 return $retorno1;
+							 }
+							 
+							 elseif ($idade<18) {
+								  $retorno2="Acesso negado. Idade mínima requerida: 18 anos";
+								  return $retorno2;
+							 }
+							 
+							 elseif($autorizacao==false){
+								 $retorno3="Acesso negado. Autorização necessária";
+								 return $retorno3;
+								 
+							 }
+							 
+						 }
+							  
+							  echo verificarAcesso(18, true);
+							  echo verificarAcesso(17, true);
+							  echo verificarAcesso(18, false);
+						?>
